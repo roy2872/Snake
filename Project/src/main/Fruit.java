@@ -1,11 +1,12 @@
-package Project;
+package Project.src.main;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
 
-import Project.Util.*;
+import Project.src.main.Util.FruitType;
+import Project.src.main.Util.SpriteLoader;
 
 public class Fruit {
 

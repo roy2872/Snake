@@ -1,4 +1,4 @@
-package Project;
+package Project.src.main;
 
 import java.time.Period;
 import java.util.Timer;

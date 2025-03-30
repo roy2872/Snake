@@ -1,4 +1,4 @@
-package Project;
+package Project.src.main;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -13,10 +13,10 @@ import java.util.LinkedList;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-import Project.Constants.ConstSnake;
-import Project.Util.Direction;
-import Project.Util.Segment;
-import Project.Util.SpriteLoader;
+import Project.src.main.Constants.ConstSnake;
+import Project.src.main.Util.Direction;
+import Project.src.main.Util.Segment;
+import Project.src.main.Util.SpriteLoader;
 public class Snake {
 
     BufferedImage[] snakeSprites;

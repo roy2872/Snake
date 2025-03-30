@@ -1,4 +1,4 @@
-package Project.Util;
+package Project.src.main.Util;
 
 public enum Direction {
     UP,

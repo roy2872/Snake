@@ -1,4 +1,4 @@
-package Project;
+package Project.src.main;
 
 public class Constants {
     

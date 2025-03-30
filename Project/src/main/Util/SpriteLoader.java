@@ -1,4 +1,4 @@
-package Project.Util;
+package Project.src.main.Util;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -14,7 +14,7 @@ public class SpriteLoader {
 
     public BufferedImage loadSprite(String sprite){
         try {
-            return ImageIO.read(new File("Project/Sprites/" + sprite + ".png"));
+            return ImageIO.read(new File("Project/src/main/Sprites/" + sprite + ".png"));
         } catch (IOException e) {
             throw new RuntimeException("Error loading sprite: " + sprite);
         }

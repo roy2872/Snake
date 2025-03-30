@@ -1,5 +1,6 @@
-package Project;
+package Project.src.main;
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowListener;
@@ -11,23 +12,23 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JWindow;
 
-import Project.Util.CustomKeyListener;
-import Project.Util.Direction;
-import Project.Util.FruitType;
-import Project.Util.Segment;
+import Project.src.main.Util.CustomKeyListener;
+import Project.src.main.Util.Direction;
+import Project.src.main.Util.FruitType;
 
 public class Game {
     
     // JWindow window;
     JFrame frame;
     JPanel panel;
+    Graphics g;
     Snake snake;
     Fruit fruit;
     Random random;
     int curFruitPosX;
     int curFruitPosY;
     boolean directionChanged;
-    Direction bufferedDirection;
+    Project.src.main.Util.Direction bufferedDirection;
     
 
     public Game() {
@@ -36,14 +37,22 @@ public class Game {
         // window = new JWindow();
         panel = new JPanel();
         frame = new JFrame();
+        
+        
+
         frame.setVisible(true);
         bufferedDirection = null;
         frame.add(panel);
+        panel.setDoubleBuffered(true);
         // window.add(frame);
         frame.setSize(320, 320);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel.setFocusable(true);
         panel.setName("Snake Game");
+
+        g = panel.getGraphics();
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, panel.getWidth(), panel.getHeight());
         // int panelWidth = panel.getWidth();
         // int panelHeight = panel.getHeight();
         // int gridSize = snake.speed; // Assuming the snake's speed is the grid size
@@ -99,7 +108,7 @@ public class Game {
             bufferedDirection = null; // Clear the buffer after checking
         }
     
-        panel.getGraphics().setColor(Color.white);
+        panel.getGraphics().setColor(Color.BLACK);
         panel.getGraphics().fillRect(0, 0, panel.getWidth(), panel.getHeight());
         collisionWithFruit();
         fruit.draw();
@@ -107,6 +116,8 @@ public class Game {
             endGame();
         }
         snake.SnakeUpdate();
+
+        // panel.repaint();
     }
 
     public void switchDirection(Direction direction) {
@@ -121,7 +132,6 @@ public class Game {
         if (snake.body.getFirst().x == fruit.fruitX && snake.body.getFirst().y == fruit.fruitY) {
             snake.grow();
             createFruit();
-            System.out.println("collided");
             
         }
     }
@@ -146,7 +156,7 @@ public class Game {
     
             // Check if the position overlaps with the snake
             isValidPosition = true;
-            for (Segment segment : snake.body) {
+            for (Project.src.main.Util.Segment segment : snake.body) {
                 if (segment.x == fruitX && segment.y == fruitY) {
                     isValidPosition = false;
                     break;
