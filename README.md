@@ -1,9 +1,4 @@
-### HOW TO RUN
---------------------------------------------------------------------
-just run the Snake.bat file
-easy peasy
-
-
+# Snake
 
 My 3rd self programming project using JAVA!
 
@@ -13,4 +8,14 @@ Any suggestions please do tell! im happy to improve this especially because its 
 
 Anyways try to enjoy this!
 
-(if the game opens, and the snake doesnt show up, reopen the game, that happens sometimes and idk why)
+## Installation
+
+Download the game here(https://github.com/roy2872/Snake/releases/tag/Windows),
+Unzip it,
+and run the Snake.bat! just like that.
+
+
+
+## Known bugs
+
+if the game opens, and the snake doesnt show up, reopen the game, that happens sometimes and idk why
