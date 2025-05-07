@@ -8,13 +8,21 @@ Any suggestions please do tell! im happy to improve this especially because its 
 
 Anyways try to enjoy this!
 
-## Installation
+## How to play?
 
-Download the game here(https://github.com/roy2872/Snake/releases/tag/Windows),
+### Requirements
+
+Requires java 21 (or higher probably)
+
+### Installation
+
+Download the game (https://github.com/roy2872/Snake/releases/tag/Windows),
 Unzip it,
-and run the Snake.bat! just like that.
+and run the Snake.bat!
 
+### Controls
 
+Arrow keys to move the snake
 
 ## Known bugs
 

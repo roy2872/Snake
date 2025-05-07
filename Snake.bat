@@ -1,1 +1,1 @@
-java -jar "D:\Programming\funsies\Snake\Snake.jar"
+java -jar Snake.jar
