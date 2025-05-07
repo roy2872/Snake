@@ -1,3 +1,8 @@
+------------------------------- HOW TO RUN --------------------------
+just run the Snake.bat file
+easy peasy
+---------------------------------------------------------------------
+
 My 3rd self programming project using JAVA!
 
 Im doing this to not get rusty on programming in the meantime
