@@ -22,7 +22,7 @@ and run the Snake.bat!
 
 ### Controls
 
-WASD Arrow keys to move the snake
+WASD or Arrow keys to move the snake
 
 ## Known bugs
 
