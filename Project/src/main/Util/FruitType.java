@@ -1,6 +1,8 @@
 package Project.src.main.Util;
 
 public enum FruitType {
-    Banana
+    Banana,
+    Strawberry,
+    Watermelon
     
 }

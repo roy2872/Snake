@@ -1,6 +1,8 @@
 package Project.src.main;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Toolkit;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowListener;
@@ -29,6 +31,7 @@ public class Game {
     int curFruitPosY;
     boolean directionChanged;
     Project.src.main.Util.Direction bufferedDirection;
+    Dimension screenSize;
     
 
     public Game() {
@@ -37,6 +40,7 @@ public class Game {
         // window = new JWindow();
         panel = new JPanel();
         frame = new JFrame();
+        screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         
         
 
@@ -46,6 +50,7 @@ public class Game {
         panel.setDoubleBuffered(true);
         // window.add(frame);
         frame.setSize(320, 320);
+        frame.setLocation(screenSize.width/2-180, screenSize.height/2-180);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel.setFocusable(true);
         panel.setName("Snake Game");
@@ -66,19 +71,19 @@ public class Game {
 
             public void keyPressed(java.awt.event.KeyEvent e) {
                 switch (e.getKeyCode()) {
-                    case java.awt.event.KeyEvent.VK_UP:
+                    case java.awt.event.KeyEvent.VK_UP,java.awt.event.KeyEvent.VK_W:
                         switchDirection(Direction.UP);
 
                         break;
-                    case java.awt.event.KeyEvent.VK_DOWN:
+                    case java.awt.event.KeyEvent.VK_DOWN,java.awt.event.KeyEvent.VK_S:
                         switchDirection(Direction.DOWN);
 
                         break;
-                    case java.awt.event.KeyEvent.VK_LEFT:
+                    case java.awt.event.KeyEvent.VK_LEFT,java.awt.event.KeyEvent.VK_A:
                         switchDirection(Direction.LEFT);
 
                         break;
-                    case java.awt.event.KeyEvent.VK_RIGHT:
+                    case java.awt.event.KeyEvent.VK_RIGHT,java.awt.event.KeyEvent.VK_D:
                         switchDirection(Direction.RIGHT);
 
                         break;
@@ -117,7 +122,6 @@ public class Game {
         }
         snake.SnakeUpdate();
 
-        // panel.repaint();
     }
 
     public void switchDirection(Direction direction) {
