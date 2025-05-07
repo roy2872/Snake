@@ -10,7 +10,7 @@ Anyways try to enjoy this!
 
 ## Installation
 
-Download the game here(https://github.com/roy2872/Snake/releases/tag/Windows),
+Download the game here(https://github.com/roy2872/Snake/releases/tag/Windows) ,
 Unzip it,
 and run the Snake.bat! just like that.
 
