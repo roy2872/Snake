@@ -16,7 +16,7 @@ Requires java 21 (or higher probably)
 
 ### Installation
 
-Download the game (https://github.com/roy2872/Snake/releases/tag/Windows),
+Download the game [here](https://github.com/roy2872/Snake/releases/tag/Windows) ,
 Unzip it,
 and run the Snake.bat!
 
